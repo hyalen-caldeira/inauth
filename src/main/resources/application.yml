@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:retail_order;db_close_on_exit=false
+    driver-class-name: org.h2.Driver
+    username: avenuecode
+    password: avenuecode
+    platform: h2
+
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+
+logging:
+  level:
+    ROOT: ERROR
+
+server:
+  port: ${appPort:8088}
