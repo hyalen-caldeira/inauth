@@ -2,21 +2,21 @@
 
 Objective
 =========
-A fictional client, has an existing Micro Service to fetch order and product information. Your job is to add a new `Search REST API` to display a list of potential matches. This exercise is expected to take around 3-5 hours of coding, but you are free to use as much time as you need.
+A fictional client has an existing Micro Service to fetch order and product information. Your job is to add a new `Search REST API` to display a list of potential matches. This exercise is expected to take around 3 to 4 hours of coding, but you are free to use as much time as you need.
 
 Requirements
 ============
 ### Task 1) ###
 The existing Micro Service to fetch order and product information has been provided for you. Your goal is to add a new generic `Search REST API` to retrieve all relevant information matching the following criteria:
 
-#### Criteria 1: Filter all the orders which are `shipped`. ####
+#### Criteria 1: Filter all the orders which are shipped. ####
  * This search criteria should be applied on the `status` column of the `orders` table.
  * The value of the `status` should be `SHIPPED`.
 
-#### Criteria 2: Filter all the orders where `discount` has been applied. ####
+#### Criteria 2: Filter all the orders where discount has been applied. ####
  * This search criteria should be applied on the `discount` column of the `orders` table.
 
-#### Criteria 3: Filter all the orders having more that `two products` in the transaction. ####
+#### Criteria 3: Filter all the orders having more that two products in the transaction. ####
 ```json
  eg:
  {
@@ -50,7 +50,7 @@ The existing Micro Service to fetch order and product information has been provi
      }
 ```
 
-#### Criteria 4: Filter all the products whose `price` is more than `$30`. ####
+#### Criteria 4: Filter all the products whose price is more than $30. ####
  * This search criteria should be applied on the `price` column of the `products` table.
 
 ### Task 2) ###
