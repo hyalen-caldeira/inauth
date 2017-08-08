@@ -65,10 +65,13 @@ Existing API Endpoints
 ======================
 1) List Orders:
    - **[GET]** `http://localhost:8088/orders`
+
 2) Fetch Order Details:
    - **[GET]** `http://localhost:8088/orders/{order_id}`
+
 3) List Products:
    - **[GET]** `http://localhost:8088/products`
+
 4) Fetch Product Details:
    - **[GET]** `http://localhost:8088/products/{product_id}`
 
@@ -79,7 +82,7 @@ Technical Information
  * The server will started on `8088` port.
  * The sample data has been pre-loaded so that the new `Search API` can be tested. Please refer to `data-h2.sql`.
 
- * Tech Stack:
+ ### Tech Stack: ###
    - Java 8
    - Maven
    - Spring Framework
