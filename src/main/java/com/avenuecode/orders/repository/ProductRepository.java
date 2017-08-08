@@ -6,9 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
 
-/**
- * @author Dharmesh Sejpal
- */
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Serializable> {
 }

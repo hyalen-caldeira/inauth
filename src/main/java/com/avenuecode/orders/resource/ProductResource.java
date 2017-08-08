@@ -14,9 +14,6 @@ import java.util.List;
 import static org.springframework.http.ResponseEntity.notFound;
 import static org.springframework.http.ResponseEntity.ok;
 
-/**
- * @author Dharmesh Sejpal
- */
 @RestController
 @RequestMapping("/products")
 public class ProductResource {
