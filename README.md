@@ -64,7 +64,7 @@ The existing Micro Service to fetch order and product information has been provi
 Existing API Endpoints
 ======================
 1) List Orders:
- * **[GET]** `http://localhost:8088/orders`
+   **[GET]** `http://localhost:8088/orders`
 
 2) Fetch Order Details:
  * **[GET]** `http://localhost:8088/orders/{order_id}`
