@@ -64,22 +64,22 @@ The existing Micro Service to fetch order and product information has been provi
 Existing API Endpoints
 ======================
 1) List Orders:
-   - **[GET]** `http://localhost:8088/orders`
+ * **[GET]** `http://localhost:8088/orders`
 
 2) Fetch Order Details:
-   - **[GET]** `http://localhost:8088/orders/{order_id}`
+ * **[GET]** `http://localhost:8088/orders/{order_id}`
 
 3) List Products:
-   - **[GET]** `http://localhost:8088/products`
+ * **[GET]** `http://localhost:8088/products`
 
 4) Fetch Product Details:
-   - **[GET]** `http://localhost:8088/products/{product_id}`
+ * **[GET]** `http://localhost:8088/products/{product_id}`
 
 Technical Information
 =====================
  * You should have Java 8, Maven and Git installed.
- * Execute `OrdersApplication` to start the server.
- * The server will started on `8088` port.
+ * Execute `OrdersApplication.java` to start the server.
+ * The server will be started on `8088` port.
  * The sample data has been pre-loaded so that the new `Search API` can be tested. Please refer to `data-h2.sql`.
 
  ### Tech Stack: ###
