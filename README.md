@@ -82,7 +82,8 @@ Technical Information
  * The server will be started on `8088` port.
  * The sample data has been pre-loaded so that the new `Search API` can be tested. Please refer to `data-h2.sql`.
 
- ### Tech Stack: ###
+Tech Stack
+==========
  * Java 8
  * Maven
  * Spring Framework
