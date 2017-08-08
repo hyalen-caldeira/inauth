@@ -83,12 +83,12 @@ Technical Information
  * The sample data has been pre-loaded so that the new `Search API` can be tested. Please refer to `data-h2.sql`.
 
  ### Tech Stack: ###
-   - Java 8
-   - Maven
-   - Spring Framework
-   - Spring Boot
-   - Hibernate
-   - JPA
-   - H2 database
-   - JUnit
-   - Spring Integration Tests
+ * Java 8
+ * Maven
+ * Spring Framework
+ * Spring Boot
+ * Hibernate
+ * JPA
+ * H2 database
+ * JUnit
+ * Spring Integration Tests
