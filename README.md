@@ -84,12 +84,14 @@ Technical Information
 
 Tech Stack
 ==========
- * Java 8
- * Maven
- * Spring Framework
- * Spring Boot
+ * Java 8.x
+ * Maven 3.x
+ * Spring Framework 4.x
+ * Spring Boot 1.5.6
  * Hibernate
  * JPA
  * H2 database
- * JUnit
+ * JUnit 4.x
+ * Mockito 2.x
+ * Hamcrest
  * Spring Integration Tests
