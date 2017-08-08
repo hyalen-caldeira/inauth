@@ -67,13 +67,13 @@ Existing API Endpoints
    **[GET]** `http://localhost:8088/orders`
 
 2) Fetch Order Details:
- * **[GET]** `http://localhost:8088/orders/{order_id}`
+   **[GET]** `http://localhost:8088/orders/{order_id}`
 
 3) List Products:
- * **[GET]** `http://localhost:8088/products`
+   **[GET]** `http://localhost:8088/products`
 
 4) Fetch Product Details:
- * **[GET]** `http://localhost:8088/products/{product_id}`
+   **[GET]** `http://localhost:8088/products/{product_id}`
 
 Technical Information
 =====================
