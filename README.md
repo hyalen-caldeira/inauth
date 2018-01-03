@@ -4,9 +4,17 @@ Objective
 =========
 A fictional client has an existing Micro Service to fetch order and product information. Your job is to add a new `Search REST API` to display a list of potential matches. This exercise is expected to take around 3 to 4 hours of coding, but you are free to use as much time as you need.
 
+Evaluation areas
+=========
+Your code will be evaluated in the following areas: 
+Configuration, Architecture, Logic, Exception Handling, Logs, Spring, Persistence, REST, Tests, Documentation, and JAVA.
+
 Requirements
 ============
 ### Task 1) ###
+Make the existing application runnable. We recommend you to use spring-boot for it, but you can use anything you want in order to make the server up and running and ready to receive the HTTP requests. The server should be started on port 8088.
+
+### Task 2) ###
 The existing Micro Service to fetch order and product information has been provided for you. Your goal is to add a new generic `Search REST API` to retrieve all relevant information matching the following criteria:
 
 #### Criteria 1: Filter all the orders which are shipped. ####
@@ -53,10 +61,10 @@ The existing Micro Service to fetch order and product information has been provi
 #### Criteria 4: Filter all the products whose price is more than $30. ####
  * This search criteria should be applied on the `price` column of the `products` table.
 
-### Task 2) ###
+### Task 3) ###
  * Add JUnit tests for all the existing classes in the workspace. Also, make sure to test-drive the new code being added.
 
-### Task 3) ###
+### Task 4) ###
  * Add **Spring Integration Tests** for all the `API endpoints`.
 
 ### Note: You are free to refactor existing codebase to fulfil these requirements. ###
@@ -78,8 +86,6 @@ Existing API Endpoints
 Technical Information
 =====================
  * You should have Java 8, Maven and Git installed.
- * Execute `OrdersApplication.java` to start the server.
- * The server will be started on `8088` port.
  * The sample data has been pre-loaded so that the new `Search API` can be tested. Please refer to `data-h2.sql`.
 
 Tech Stack
