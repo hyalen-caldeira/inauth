@@ -4,10 +4,7 @@ import com.avenuecode.orders.domain.Order;
 import com.avenuecode.orders.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,7 +14,6 @@ import static org.springframework.http.ResponseEntity.ok;
 @RestController
 @RequestMapping("/orders")
 public class OrderResource {
-
     @Autowired
     private OrderService orderService;
 
@@ -26,13 +22,13 @@ public class OrderResource {
         return ok(orderService.listOrders());
     }
 
-    @GetMapping(value = "/{orderId}")
+    @GetMapping(value = "/{orderId:\\d+}")
     public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
         Order order = orderService.getOrder(orderId);
-        if (order == null) {
+
+        if (order == null)
             return notFound().build();
-        }
+
         return ok(order);
     }
-
 }

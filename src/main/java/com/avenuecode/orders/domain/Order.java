@@ -29,7 +29,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Table(name = "orders")
 @JsonInclude(NON_NULL)
 public class Order implements Serializable {
-
     public static final int PRECISION = 2;
 
     @Id
@@ -45,11 +44,8 @@ public class Order implements Serializable {
 
     @Column(nullable = false)
     private BigDecimal taxPercent;
-
     private BigDecimal total;
-
     private BigDecimal totalTax;
-
     private BigDecimal grandTotal;
 
     @Column(length = 10)
@@ -61,13 +57,16 @@ public class Order implements Serializable {
             joinColumns = @JoinColumn(name = "order_id", updatable = false, nullable = false),
             inverseJoinColumns = @JoinColumn(name = "product_id", updatable = false, nullable = false)
     )
+
     private List<Product> products = new ArrayList<>();
 
     public BigDecimal getTotal() {
         BigDecimal total = new BigDecimal(ZERO);
+
         for (Product product : products) {
             total = total.add(product.getPrice());
         }
+
         return scaled(total);
     }
 
@@ -86,5 +85,4 @@ public class Order implements Serializable {
     private BigDecimal scaled(BigDecimal value) {
         return value.setScale(PRECISION, ROUND_FLOOR);
     }
-
 }
