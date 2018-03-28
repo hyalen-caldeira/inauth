@@ -1,4 +1,4 @@
-package com.avenuecode.orders.domain;
+package com.avenuecode.orders.specification;
 
 import lombok.Getter;
 

@@ -1,10 +1,11 @@
-package com.avenuecode.orders.domain;
+package com.avenuecode.orders.specification;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import com.avenuecode.orders.domain.Order;
 import org.springframework.data.jpa.domain.Specification;
 
 public class OrderSpecification implements Specification<Order> {
