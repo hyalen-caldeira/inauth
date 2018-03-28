@@ -29,15 +29,14 @@ public class OrderSpecificationBuilder {
         if (params.size() == 0)
             return null;
 
-        List<Specification<Order>> specs = new ArrayList<Specification<Order>>();
-
+        List<Specification<Order>> specifications = new ArrayList<Specification<Order>>();
         for (SearchCriteria param : params)
-            specs.add(new OrderSpecification(param));
+            specifications.add(new OrderSpecification(param));
 
-        Specification<Order> result = specs.get(0);
-
-        for (int i = 1; i < specs.size(); i++)
-            result = Specifications.where(result).and(specs.get(i));
+        Specification<Order> result = null;
+        for (Specification spec : specifications) {
+            result = Specifications.where(result).and(spec);
+        }
 
         return result;
     }

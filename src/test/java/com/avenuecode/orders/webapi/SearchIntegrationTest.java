@@ -37,38 +37,50 @@
         }
 
         @Test
-        public void when_NonExistStatusIsGiven_then_NothingIsReturned() throws Exception {
+        public void when_ANonExistStatusIsGiven_then_NothingIsReturned() throws Exception {
             mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=status:NON_EXIST").accept(MediaType.APPLICATION_JSON))
-                    .andExpect(jsonPath("$", hasSize(0))).andDo(print());
+                .andExpect(jsonPath("$", hasSize(0))).andDo(print());
         }
 
         @Test
-        public void when_ValidStatusAndDiscountIsGiven_then_TheCorrectNumberOfOrdersIsReturned() throws Exception {
+        public void when_AValidStatusAndDiscountAreGiven_then_TheCorrectNumberOfOrdersAreReturned() throws Exception {
             mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=status:SHIPPED,discount>0").accept(MediaType.APPLICATION_JSON))
-                    .andExpect(jsonPath("$", hasSize(1))).andDo(print());
+                .andExpect(jsonPath("$", hasSize(1))).andDo(print());
         }
 
         @Test
-        public void when_ValidStatusIsGiven_then_TheCorrectNumberOfOrdersIsReturned() throws Exception {
+        public void when_AShippedStatusFilterIsGiven_then_TheCorrectNumberOfOrdersAreReturned() throws Exception {
             mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=status:SHIPPED").accept(MediaType.APPLICATION_JSON))
-                    .andExpect(jsonPath("$", hasSize(3))).andDo(print());
+                .andExpect(jsonPath("$", hasSize(3))).andDo(print());
         }
 
         @Test
-        public void when_ValidDiscountValueIsGiven_then_TheCorrectNumberOfOrdersContainingAtMininumThisDiscountIsReturned() throws Exception {
+        public void when_AFulfilledStatusFilterIsGiven_then_TheCorrectNumberOfOrdersAreReturned() throws Exception {
+            mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=status:FULFILLED").accept(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", hasSize(2))).andDo(print());
+        }
+
+        @Test
+        public void when_AValidDiscountValueIsGiven_then_TheCorrectNumberOfOrdersContainingAtMininumThisDiscountAreReturned() throws Exception {
             mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=discount>0").accept(MediaType.APPLICATION_JSON))
-                    .andExpect(jsonPath("$", hasSize(2))).andDo(print());
+                .andExpect(jsonPath("$", hasSize(2))).andDo(print());
         }
 
         @Test
-        public void when_ValidNumberOfProductsIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisNumberOfProductsIsReturned() throws Exception {
+        public void when_AValidNumberOfProductsIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisNumberOfProductsAreReturned() throws Exception {
             mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=products:2").accept(MediaType.APPLICATION_JSON))
-                    .andExpect(jsonPath("$", hasSize(3))).andDo(print());
+                .andExpect(jsonPath("$", hasSize(3))).andDo(print());
         }
 
         @Test
-        public void when_ValidProductPriceIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisPriceIsReturned() throws Exception {
+        public void when_AValidProductPriceIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisPriceAreReturned() throws Exception {
             mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=price>30").accept(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$", hasSize(4))).andDo(print());
+        }
+
+        @Test
+        public void when_AnInvalidProductPriceIsGiven_then_NoOrderIsReturned() throws Exception {
+            mockMvc.perform(MockMvcRequestBuilders.get("/search?criteria=price>90").accept(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", hasSize(0))).andDo(print());
         }
     }
