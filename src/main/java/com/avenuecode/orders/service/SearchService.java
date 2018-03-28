@@ -4,12 +4,12 @@ import com.avenuecode.orders.domain.Order;
 import com.avenuecode.orders.domain.SearchCriteria;
 import com.avenuecode.orders.repository.OrderRepository;
 import com.avenuecode.orders.domain.OrderSpecificationBuilder;
-import com.avenuecode.orders.util.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -50,6 +50,19 @@ public class SearchService {
     }
 
     public List<Order> fetchOrdersByNumberOfValidProducts(int size) {
-        return Utils.fetchOrdersByNumberOfValidProducts(orderRepository.findByProductsPriceGreaterThan(new BigDecimal("0")).stream().distinct().collect(Collectors.toList()), size);
+        List<Order> list = new ArrayList<Order>();
+
+        List<Order> orders = orderRepository
+            .findByProductsPriceGreaterThan(new BigDecimal("0"))
+            .stream().distinct().collect(Collectors.toList());
+
+        if (orders == null || orders.size() == 0)
+            return list;
+
+        for (Order order : orders)
+            if (order.getProducts().size() >= size)
+                list.add(order);
+
+        return list;
     }
 }

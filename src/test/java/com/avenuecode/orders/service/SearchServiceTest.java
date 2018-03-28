@@ -40,25 +40,31 @@ public class SearchServiceTest {
 	}
 
 	@Test
-	public void when_AValidStatusIsGiven_then_TheCorrectNumberOfOrdersIsReturned() {
+	public void when_AValidStatusAndDiscountAreGiven_then_TheCorrectNumberOfOrdersAreReturned() {
+		List<Order> result = searchService.searchCriteria("criteria=status:SHIPPED,discount>0");
+		assertEquals(1, result.size());
+	}
+
+	@Test
+	public void when_AValidStatusIsGiven_then_TheCorrectNumberOfOrdersAreReturned() {
 		List<Order> result = searchService.fetchOrdersByCriteria(new OrderSpecification(new SearchCriteria("status", ":", "SHIPPED")));
 		assertEquals(3, result.size());
 	}
 
 	@Test
-	public void when_AValidDiscountValueIsGiven_then_TheCorrectNumberOfOrdersContainingAtMininumThisDiscountIsReturned() {
+	public void when_AValidDiscountValueIsGiven_then_TheCorrectNumberOfOrdersContainingAtMininumThisDiscountAreReturned() {
 		List<Order> result = searchService.fetchOrdersByCriteria(new OrderSpecification(new SearchCriteria("discount", ">", "0")));
 		assertEquals(2, result.size());
 	}
 
 	@Test
-	public void when_AValidNumberOfProductsIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisNumberOfProductsIsReturned() {
+	public void when_AValidNumberOfProductsIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisNumberOfProductsAreReturned() {
 		List<Order> result = searchService.fetchOrdersByNumberOfValidProducts(2);
 		assertEquals(3, result.size());
 	}
 
 	@Test
-	public void when_AValidProductPriceIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisPriceIsReturned() {
+	public void when_AValidProductPriceIsGiven_then_TheCorrectNumberOfOrdersContainingAtMinimumThisPriceAreReturned() {
 		List<Order> result = searchService.fetchOrdersByProductPrice(new BigDecimal(30));
 		assertEquals(4, result.size());
 	}

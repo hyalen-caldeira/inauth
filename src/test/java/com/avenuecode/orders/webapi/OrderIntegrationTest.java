@@ -40,13 +40,13 @@ public class OrderIntegrationTest {
 	}
 
 	@Test
-	public void when_NonExistOrderIdIsGiven_then_ANotFoundStatusIsReturned() throws Exception {
+	public void when_ANonExistOrderIdIsGiven_then_ANotFoundStatusIsReturned() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/orders" + NON_EXIST_ORDER_ID).accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().isNotFound());
 	}
 
 	@Test
-	public void when_ValidOrderIdIsGiven_then_AnOkStatusIsReturned() throws Exception {
+	public void when_AValidOrderIdIsGiven_then_AnOkStatusIsReturned() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/orders" + ORDER_ID).accept(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk());
 	}

@@ -40,13 +40,13 @@ public class ProductIntegrationTest {
 	}
 
 	@Test
-	public void when_NonExistProductIdIsGiven_then_ANotFoundStatusIsReturned() throws Exception {
+	public void when_ANonExistProductIdIsGiven_then_ANotFoundStatusIsReturned() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/products" + NON_EXIST_PRODUCT_ID).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isNotFound());
 	}
 
 	@Test
-	public void when_ValidProductIdIsGiven_then_AnOkStatusIsReturned() throws Exception {
+	public void when_AValidProductIdIsGiven_then_AnOkStatusIsReturned() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/products" + PRODUCT_ID).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 	}
