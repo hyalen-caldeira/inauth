@@ -9,7 +9,6 @@ import java.util.List;
 
 @Service
 public class ProductService {
-
     @Autowired
     private ProductRepository productRepository;
 
@@ -20,5 +19,4 @@ public class ProductService {
     public Product getProduct(String productId) {
         return productRepository.findOne(productId);
     }
-
 }
