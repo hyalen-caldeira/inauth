@@ -1,5 +1,6 @@
-package com.avenuecode.orders.domain;
+package com.avenuecode.orders.specification;
 
+import com.avenuecode.orders.domain.Order;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.domain.Specifications;
 

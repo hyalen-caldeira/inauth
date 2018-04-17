@@ -2,8 +2,8 @@ package com.avenuecode.orders.service;
 
 import com.avenuecode.orders.Application;
 import com.avenuecode.orders.domain.Order;
-import com.avenuecode.orders.domain.OrderSpecification;
-import com.avenuecode.orders.domain.SearchCriteria;
+import com.avenuecode.orders.specification.OrderSpecification;
+import com.avenuecode.orders.specification.SearchCriteria;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

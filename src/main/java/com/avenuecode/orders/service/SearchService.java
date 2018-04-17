@@ -1,9 +1,9 @@
 package com.avenuecode.orders.service;
 
 import com.avenuecode.orders.domain.Order;
-import com.avenuecode.orders.domain.SearchCriteria;
+import com.avenuecode.orders.specification.SearchCriteria;
 import com.avenuecode.orders.repository.OrderRepository;
-import com.avenuecode.orders.domain.OrderSpecificationBuilder;
+import com.avenuecode.orders.specification.OrderSpecificationBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
