@@ -12,17 +12,17 @@ Configuration, Architecture, Logic, Exception Handling, Logs, Spring, Persistenc
 Requirements
 ============
 ### Task 1) ###
-I've been using spring-boot to make the server up, runnable and ready to receive HTTP requests. The server should be started on port 8088.
+I've been using spring-boot to make the server up, runnable and ready to receive HTTP requests. The server is started on port 8088.
 
 ### Task 2) ###
 Besides the Micro Service to fetch order and product information, I've also added a new generic `Search REST API` to retrieve all relevant information matching the following criteria:
 
 #### Criteria 1: Filter all the orders which are shipped. ####
- * This search criteria should be applied on the `status` column of the `orders` table.
+ * This search criteria is applied on the `status` column of the `orders` table.
  * The value of the `status` should be `SHIPPED`.
 
 #### Criteria 2: Filter all the orders where discount has been applied. ####
- * This search criteria should be applied on the `discount` column of the `orders` table.
+ * This search criteria is applied on the `discount` column of the `orders` table.
 
 #### Criteria 3: Filter all the orders having more that two products in the transaction. ####
 ```json
@@ -59,7 +59,7 @@ Besides the Micro Service to fetch order and product information, I've also adde
 ```
 
 #### Criteria 4: Filter all the products whose price is more than $30. ####
- * This search criteria should be applied on the `price` column of the `products` table.
+ * This search criteria is applied on the `price` column of the `products` table.
 
 ### Task 3) ###
  * I've added unit tests for all the existing classes in the workspace.
