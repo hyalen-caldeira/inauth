@@ -1,12 +1,12 @@
-# Avenue Code Java Assessment #
+# Java Spring Rest API #
 
 Objective
 =========
-A fictional client has an existing Micro Service to fetch order and product information. Your job is to add a new `Search REST API` to display a list of potential matches. This exercise is expected to take around 3 to 4 hours of coding, but you are free to use as much time as you need.
+A fictional client has an existing Micro Service to fetch order and product information. This simple code contains a `Search REST API` to display a list of potential matches. 
 
 Evaluation areas
 =========
-Your code will be evaluated in the following areas: 
+The following areas were addressed: 
 Configuration, Architecture, Logic, Exception Handling, Logs, Spring, Persistence, REST, Tests, Documentation, and JAVA.
 
 Requirements
@@ -124,6 +124,3 @@ Format
     * How to run the suite of automated tests.
     * Mention anything that was asked but not delivered and why, and any additional comments.
 * Any questions, please send an email to **recruitment.engineering@avenuecode.com**
-
-Thank you,
-The AvenueCode Recruiting Team
