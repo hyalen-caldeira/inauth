@@ -1,28 +1,28 @@
-# Avenue Code Java Assessment #
+# Java - Spring - Rest API - Unit/Integration Test #
 
 Objective
 =========
-A fictional client has an existing Micro Service to fetch order and product information. Your job is to add a new `Search REST API` to display a list of potential matches. This exercise is expected to take around 3 to 4 hours of coding, but you are free to use as much time as you need.
+A fictional client has an existing Micro Service to fetch order and product information. This simple code contains a `Search REST API` to display a list of potential matches. 
 
 Evaluation areas
 =========
-Your code will be evaluated in the following areas: 
+The following areas were addressed: 
 Configuration, Architecture, Logic, Exception Handling, Logs, Spring, Persistence, REST, Tests, Documentation, and JAVA.
 
 Requirements
 ============
 ### Task 1) ###
-Make the existing application runnable. We recommend you to use spring-boot for it, but you can use anything you want in order to make the server up and running and ready to receive the HTTP requests. The server should be started on port 8088.
+I've been using spring-boot to make the server up, runnable and ready to receive HTTP requests. The server is started on port 8088.
 
 ### Task 2) ###
-The existing Micro Service to fetch order and product information has been provided for you. Your goal is to add a new generic `Search REST API` to retrieve all relevant information matching the following criteria:
+Besides the Micro Service to fetch order and product information, I've also added a new generic `Search REST API` to retrieve all relevant information matching the following criteria:
 
 #### Criteria 1: Filter all the orders which are shipped. ####
- * This search criteria should be applied on the `status` column of the `orders` table.
+ * This search criteria is applied on the `status` column of the `orders` table.
  * The value of the `status` should be `SHIPPED`.
 
 #### Criteria 2: Filter all the orders where discount has been applied. ####
- * This search criteria should be applied on the `discount` column of the `orders` table.
+ * This search criteria is applied on the `discount` column of the `orders` table.
 
 #### Criteria 3: Filter all the orders having more that two products in the transaction. ####
 ```json
@@ -59,15 +59,13 @@ The existing Micro Service to fetch order and product information has been provi
 ```
 
 #### Criteria 4: Filter all the products whose price is more than $30. ####
- * This search criteria should be applied on the `price` column of the `products` table.
+ * This search criteria is applied on the `price` column of the `products` table.
 
 ### Task 3) ###
- * Add JUnit tests for all the existing classes in the workspace. Also, make sure to test-drive the new code being added.
+ * I've added unit tests for all the existing classes in the workspace.
 
 ### Task 4) ###
- * Add **Spring Integration Tests** for all the `API endpoints`.
-
-### Note: You are free to refactor existing codebase to fulfil these requirements. ###
+ * I've added **Spring Integration Tests** for all the `API endpoints`.
 
 Existing API Endpoints
 ======================
@@ -85,7 +83,7 @@ Existing API Endpoints
 
 Technical Information
 =====================
- * You should have Java 8, Maven and Git installed.
+ * To test, you should have Java 8, Maven and Git installed.
  * The sample data has been pre-loaded so that the new `Search API` can be tested. Please refer to `data-h2.sql`.
 
 Tech Stack
@@ -101,29 +99,3 @@ Tech Stack
  * Mockito 2.x
  * Hamcrest
  * Spring Integration Tests
- 
-Delivery Instructions
-=====================
-
-1) You must provide your BitBucket username. A free BitBucket account can be created at http://bitbucket.org
-
-2) The recruiter will give you read permission to a repository named **java-assessment**, at https://bitbucket.org/ac-recruitment/java-assessment
-
-3) You must fork this repository into a private repository on your own account and push your code in there.
-
-4) Once finished, you must give the user **ac-recruitment** read permission on your repository so that you can be evaluated. Then, please contact back your recruiter and he will get an engineer to evaluate your test.
-
-5) After you are evaluated, the recruiter will remove your read permission from the original repository.
-
-Format
-======
-
-* This assessment must be delivered within 2 days.
-* You must provide a README.txt (plain text) or a README.md (Markdown) file at the root of your repository, explaining:
-    * How to compile and run the application.
-    * How to run the suite of automated tests.
-    * Mention anything that was asked but not delivered and why, and any additional comments.
-* Any questions, please send an email to **recruitment.engineering@avenuecode.com**
-
-Thank you,
-The AvenueCode Recruiting Team
