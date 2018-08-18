@@ -1,17 +1,18 @@
 package us.hyalen.orders.service;
 
-import us.hyalen.orders.Application;
-import us.hyalen.orders.domain.Order;
-import us.hyalen.orders.domain.OrderSpecification;
-import us.hyalen.orders.domain.SearchCriteria;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+import us.hyalen.orders.Application;
+import us.hyalen.orders.domain.Order;
+import us.hyalen.orders.domain.OrderSpecification;
+import us.hyalen.orders.domain.SearchCriteria;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -20,7 +21,8 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = Application.class)
-@DataJpaTest
+@WebAppConfiguration
+@SpringBootTest
 public class SearchServiceTest {
 	@TestConfiguration
     static class SearchServiceTestContextConfiguration {

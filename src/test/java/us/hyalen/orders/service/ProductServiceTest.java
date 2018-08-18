@@ -1,15 +1,16 @@
 package us.hyalen.orders.service;
 
-import us.hyalen.orders.Application;
-import us.hyalen.orders.domain.Product;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+import us.hyalen.orders.Application;
+import us.hyalen.orders.domain.Product;
 
 import java.util.List;
 
@@ -18,7 +19,8 @@ import static org.junit.Assert.assertNull;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = Application.class)
-@DataJpaTest
+@WebAppConfiguration
+@SpringBootTest
 public class ProductServiceTest {
 	private static final String PRODUCT_ID = "1";
 	private static final String NON_EXIST_PRODUCT_ID = "999";

@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>java-assessment</name>
-    <description>Avenue Code Java Coding Assessment</description>
+    <description>Hyalen Java Code Example</description>
 
     <parent>
 	  	<groupId>org.springframework.boot</groupId>
