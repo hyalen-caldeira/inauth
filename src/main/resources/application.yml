@@ -2,8 +2,8 @@ spring:
   datasource:
     url: jdbc:h2:mem:retail_order;db_close_on_exit=false
     driver-class-name: org.h2.Driver
-    username: avenuecode
-    password: avenuecode
+    username: hyalen
+    password: hyalen
     platform: h2
 
   data:

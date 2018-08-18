@@ -1,13 +1,10 @@
-package com.avenuecode.orders.resource;
+package us.hyalen.orders.resource;
 
-import com.avenuecode.orders.domain.Product;
-import com.avenuecode.orders.service.ProductService;
+import us.hyalen.orders.domain.Product;
+import us.hyalen.orders.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,7 +14,6 @@ import static org.springframework.http.ResponseEntity.ok;
 @RestController
 @RequestMapping("/products")
 public class ProductResource {
-
     @Autowired
     private ProductService productService;
 
@@ -26,13 +22,13 @@ public class ProductResource {
         return ok(productService.listProducts());
     }
 
-    @GetMapping(value = "/{productId}")
+    @GetMapping(value = "/{productId:\\d+}")
     public ResponseEntity<Product> getProduct(@PathVariable String productId) {
         Product product = productService.getProduct(productId);
-        if (product == null) {
+
+        if (product == null)
             return notFound().build();
-        }
+
         return ok(product);
     }
-
 }

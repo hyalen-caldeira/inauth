@@ -1,7 +1,7 @@
-package com.avenuecode.orders.service;
+package us.hyalen.orders.service;
 
-import com.avenuecode.orders.domain.Product;
-import com.avenuecode.orders.repository.ProductRepository;
+import us.hyalen.orders.domain.Product;
+import us.hyalen.orders.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,6 @@ import java.util.List;
 
 @Service
 public class ProductService {
-
     @Autowired
     private ProductRepository productRepository;
 
@@ -20,5 +19,4 @@ public class ProductService {
     public Product getProduct(String productId) {
         return productRepository.findOne(productId);
     }
-
 }

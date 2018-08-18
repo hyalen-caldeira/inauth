@@ -1,7 +1,8 @@
-package com.avenuecode.orders.domain;
+package us.hyalen.orders.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.Getter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,8 +17,8 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Data
 @Entity
 @Table(name = "products")
+@Getter
 public class Product implements Serializable {
-
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @JsonIgnore
@@ -34,5 +35,4 @@ public class Product implements Serializable {
 
     @Column(nullable = false)
     private BigDecimal price;
-
 }
