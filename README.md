@@ -7,7 +7,7 @@ Create a DB containing 10.000 random entries for valid latitude and longitude co
 Evaluation areas
 =========
 The following areas were addressed: 
-Java, Configuration, Architecture, Logic, Exception Handling, Logs, Spring, Persistence, REST, Tests, Documentation, and Geocoding.
+Java, Configuration, Architecture, Logic, Exception Handling, Logs, Spring, Persistence, REST, Tests, Documentation and Geocoding.
 
 Requirements
 ============
@@ -19,7 +19,7 @@ I've been using the H2 in memory DB. To populate it I
 I've been using spring-boot to make the server up, runnable and ready to receive HTTP requests. The server is started on port 8088.
 
 ### Task 3) ###
-Besides the Micro Service to fetch coordinates information, I've also added solution perform some operations, given coordinates of some locations:
+Besides the Micro Service to fetch coordinates information, I've also added solution performing operations through coordinates of some locations:
 
 #### Create 3 Web Service: ####
  * `getAllDataSets` - GET method to return all data in the DB.
@@ -72,9 +72,6 @@ Besides the Micro Service to fetch coordinates information, I've also added solu
      }
 ```
 
-#### Criteria 4: Filter all the products whose price is more than $30. ####
- * This search criteria is applied on the `price` column of the `products` table.
-
 ### Task 4) ###
  * I've added unit tests for all the existing classes in the workspace.
 
@@ -103,7 +100,7 @@ Tech Stack
  * Maven 3.x
  * Spring Framework 4.x
  * Spring Boot 1.5.6
- * Google Map API
+ * Google Maps API
  * Hibernate
  * JPA
  * H2 database
