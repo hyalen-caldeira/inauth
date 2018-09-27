@@ -1,3 +1,5 @@
+insert into location (locationId) values ('1', '1257833283', '9394550220002', 'Diva Jeans', 39.99);
+
 insert into products (product_id, upc, sku, description, price) values ('1', '1257833283', '9394550220002', 'Diva Jeans', 39.99);
 insert into products (product_id, upc, sku, description, price) values ('2', '1358743283', '7394650110003', 'Polo Shirt', 19.99);
 insert into products (product_id, upc, sku, description, price) values ('3', '1458843283', '7394750120000', 'Floral Swing Skirt', 69.99);
