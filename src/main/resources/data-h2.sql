@@ -1,4 +1,9 @@
-insert into location (locationId) values ('1', '1257833283', '9394550220002', 'Diva Jeans', 39.99);
+insert into
+  location (latitude, longitude, city, state, country)
+values
+  (45.3, 54.3, 'Belo Horizonte', 'Minas Gerais', 'Brazil'),
+  (55.3, 68.3, 'Corona', 'California', 'United States');
+--insert into location (latitude, longitude, city, state, country) values (55.3, 68.3, 'Corona', 'California', 'United States');
 
 insert into products (product_id, upc, sku, description, price) values ('1', '1257833283', '9394550220002', 'Diva Jeans', 39.99);
 insert into products (product_id, upc, sku, description, price) values ('2', '1358743283', '7394650110003', 'Polo Shirt', 19.99);

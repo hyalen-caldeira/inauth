@@ -14,6 +14,21 @@ Requirements
 
 ### Task 1) ###
 I've been using the H2 in memory DB. To populate it I 
+CALL CSVWRITE('/Users/hyalencaldeira/Documents/workspace/inauth/MyCSV.txt', 'SELECT * FROM LOCATION', 'charset=UTF-8 fieldSeparator=' || CHAR(9));
+http://localhost:8088/h2-console
+Login/Password: inauth
+SELECT CONCAT('(', LATITUDE, ', ', LONGITUDE, ', ', CITY, ', ', STATE, ', ', COUNTRY,')') FROM LOCATION
+
+CALL CSVWRITE(
+    '/Users/hyalencaldeira/Documents/workspace/inauth/MyCSV.txt', 
+    'SELECT CONCAT(CHAR(40), 
+LATITUDE, CHAR(44), 
+LONGITUDE, CHAR(44), CHAR(39), 
+CITY, CHAR(39), CHAR(44), CHAR(39), 
+STATE, CHAR(39), CHAR(44), CHAR(39), 
+COUNTRY, CHAR(39), CHAR(41)) 
+FROM LOCATION', 
+'charset=UTF-8 fieldSeparator=' || CHAR(9));
 
 ### Task 2) ###
 I've been using spring-boot to make the server up, runnable and ready to receive HTTP requests. The server is started on port 8088.
@@ -108,3 +123,4 @@ Tech Stack
  * Mockito 2.x
  * Hamcrest
  * Spring Integration Tests
+ * Lombok

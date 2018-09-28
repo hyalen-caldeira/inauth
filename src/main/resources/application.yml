@@ -2,9 +2,14 @@ spring:
   datasource:
     url: jdbc:h2:mem:retail_order;db_close_on_exit=false
     driver-class-name: org.h2.Driver
-    username: hyalen
-    password: hyalen
+    username: inauth
+    password: inauth
     platform: h2
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
   data:
     jpa:
@@ -16,6 +21,14 @@ spring:
 
 logging:
   level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
     ROOT: ERROR
 
 server:
