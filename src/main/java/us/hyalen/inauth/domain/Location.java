@@ -27,12 +27,12 @@ public class Location implements Serializable {
     @Column(nullable = false)
     private Double longitude;
 
-    @Column(nullable = false, length = 40)
-    private String city;
-
-    @Column(nullable = false, length = 40)
-    private String state;
-
-    @Column(nullable = false, length = 40)
-    private String country;
+//    @Column(nullable = false, length = 40)
+//    private String city;
+//
+//    @Column(nullable = false, length = 40)
+//    private String state;
+//
+//    @Column(nullable = false, length = 40)
+//    private String country;
 }

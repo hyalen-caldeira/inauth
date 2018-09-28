@@ -35,7 +35,10 @@ public class Utils {
 		while (count > 0) {
 			LatLng latLng = LatLng.random();
 
-			Location location = mapsApi.getLocation(latLng.toString());
+			// Location location = mapsApi.getLocation(latLng.toString());
+			Location location = new Location();
+			location.setLatitude(latLng.getLatitude());
+			location.setLongitude(latLng.getLongitude());
 
 			repository.save(location);
 		}

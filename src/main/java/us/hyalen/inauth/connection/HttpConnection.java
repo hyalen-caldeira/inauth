@@ -72,9 +72,11 @@ public class HttpConnection {
         StringBuilder result = new StringBuilder();
 
         for (Map.Entry<String, String> entry : params.entrySet()) {
-            result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
+//            result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
+            result.append(entry.getKey());
             result.append("=");
-            result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
+//            result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
+            result.append(entry.getValue());
             result.append("&");
         }
 

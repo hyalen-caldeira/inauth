@@ -23,10 +23,7 @@ CALL CSVWRITE(
     '/Users/hyalencaldeira/Documents/workspace/inauth/MyCSV.txt', 
     'SELECT CONCAT(CHAR(40), 
 LATITUDE, CHAR(44), 
-LONGITUDE, CHAR(44), CHAR(39), 
-CITY, CHAR(39), CHAR(44), CHAR(39), 
-STATE, CHAR(39), CHAR(44), CHAR(39), 
-COUNTRY, CHAR(39), CHAR(41)) 
+LONGITUDE, CHAR(41)) 
 FROM LOCATION', 
 'charset=UTF-8 fieldSeparator=' || CHAR(9));
 
