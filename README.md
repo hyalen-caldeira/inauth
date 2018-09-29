@@ -3,6 +3,7 @@ Hi Charles, follow this instructions to test the application. Please, let me kno
 ### Considerations ###
   * The application is configured to run on port 8088
   * The application use an in memory DB, H2 Database
+  * This is a stand alone application where you need is embedded (Tomcat, DB, ...)
   * The application will populate the DB with 10000 records previously generated
     * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/util/Utils.java
   * I'm using the Google Maps API to get information from given coordinates
