@@ -26,6 +26,10 @@ Once the application is running, open a browser of your choice
     * http://localhost:8088/inauth/api/locations/40.714224,-73.961452
     * If the coordinate doens't exist in the DB, the app will return `404 - No Found`
     * Otherwise the application will access a Google Maps API and will return information about the coordinate
+  * To add a new coordinate
+    * http://localhost:8088/inauth/api/locations
+    * Inform the latitude and longitude on body of the http post request
+    * `{"latitude" : "42.714224", "longitude" : "-53.961452"}`
   * To see a report about distances, as requested
     * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452
     * If the coordinates is within USA you will see the message: `The given coordinate is withing the USA`
@@ -42,10 +46,6 @@ Once the application is running, open a browser of your choice
     6016.952416298471 MILES of distance from ZURICH
     0.0 MILES of distance from MEXICO and it is also within 500 MILES of distance of this city.
     ```
-  * To add a new coordinate
-    * http://localhost:8088/inauth/api/locations
-    * Inform the latitude and longitude on body of the http post request
-    * `{"latitude" : "42.714224", "longitude" : "-53.961452"}`
   * To access the in memory database
     * http://localhost:8088/h2-console and then inform:
       * Driver Class: org.h2.Driver
