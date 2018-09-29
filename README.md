@@ -52,7 +52,7 @@ Once the application is running, open a browser of your choice
       * JDBC URL: jdbc:h2:mem:inauth
       * Login: inauth
       * Password: inauth
-    * Press the 'connect' button
+    * Press the `connect` button
 
 Objective
 =========
