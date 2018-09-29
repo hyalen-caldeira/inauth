@@ -50,10 +50,10 @@ Once the application is running, open a browser of your choice and:
     ```
   * To access the in memory database
     * http://localhost:8088/h2-console and then inform:
-      * Driver Class: org.h2.Driver
-      * JDBC URL: jdbc:h2:mem:inauth
-      * Login: inauth
-      * Password: inauth
+      * Driver Class: `org.h2.Driver`
+      * JDBC URL: `jdbc:h2:mem:inauth`
+      * Login: `inauth`
+      * Password: `inauth`
     * Press the `connect` button
 
 Objective
