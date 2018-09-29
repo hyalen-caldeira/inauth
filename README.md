@@ -16,7 +16,7 @@ https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.
 ### To execute the app ###
 * `java -jar inauth-0.0.1-SNAPSHOT.jar`
 * I've sent the .jar file to your email
-### To test the Endpoints ###
+### To test the endpoints ###
 Once the application is running, open a browser of your choice
   * To get all coordinates
     * http://localhost:8088/inauth/api/locations
@@ -90,7 +90,7 @@ Besides the Micro Service to fetch coordinates information, I've also added solu
  * `getAllDataSets` - GET method to return all data in the DB.
  * `getData(latitude, longitude)` - GET method to return if the coordinates exists in the DB.
  * `addData(latitude, longitude)` - POST method to add coordinate to the DB.
- * Apart of the above web services I've also added the `getAssessment(latitude, longitude)` service.
+ * Apart of the above web services I've also added the `getAssessment(latitude, longitude)` service - GET method to return a distance report.
 
 #### From above Web Services, create a Java solution for: ####
  * Given the entry's coordinates, determine if those coordinates are within the United States.
