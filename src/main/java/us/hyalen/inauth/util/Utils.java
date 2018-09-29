@@ -2,45 +2,29 @@ package us.hyalen.inauth.util;
 
 import com.javadocmd.simplelatlng.LatLng;
 import org.springframework.beans.factory.annotation.Autowired;
-import us.hyalen.inauth.connection.GoogleMapsApi;
+import us.hyalen.inauth.core.location.v1.LocationRepository;
 import us.hyalen.inauth.domain.Location;
-import us.hyalen.inauth.domain.Order;
-import us.hyalen.inauth.repository.LocationRepository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.text.DecimalFormat;
 
 public class Utils {
-	@Autowired
-	LocationRepository repository;
+    private static final int NUM_RECORDS = 10000;
 
-    public static List<Order> fetchOrdersByNumberOfValidProducts(List<Order> orders, int size) {
-    	List<Order> list = new ArrayList<Order>();
+    @Autowired
+    private LocationRepository repository;
 
-    	if (orders == null || orders.size() == 0)
-    		return list;
+    public void populate() {
+        for (int i = 0; i < NUM_RECORDS; i++) {
+            LatLng latLng = LatLng.random();
 
-    	for (Order order : orders)
-    		if (order.getProducts().size() >= size)
-				list.add(order);
+            // Location location = mapsApi.getLocation(latLng.toString());
+            DecimalFormat df = new DecimalFormat(".######");
 
-    	return list;
+            Location location = new Location();
+            location.setLatitude(Double.valueOf(df.format(latLng.getLatitude())));
+            location.setLongitude(Double.valueOf(df.format(latLng.getLongitude())));
+
+            repository.save(location);
+        }
     }
-
-	public void populate() throws Exception {
-		GoogleMapsApi mapsApi = new GoogleMapsApi();
-
-		int count = 10;
-
-		while (count > 0) {
-			LatLng latLng = LatLng.random();
-
-			// Location location = mapsApi.getLocation(latLng.toString());
-			Location location = new Location();
-			location.setLatitude(latLng.getLatitude());
-			location.setLongitude(latLng.getLongitude());
-
-			repository.save(location);
-		}
-	}
 }

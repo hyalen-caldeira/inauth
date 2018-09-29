@@ -10,13 +10,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import us.hyalen.inauth.Application;
+import us.hyalen.inauth.core.location.v1.LocationService;
 import us.hyalen.inauth.domain.Location;
 
 import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = Application.class)
@@ -49,10 +49,4 @@ public class LocationServiceTest {
         Optional<Location> result = locationService.getLocationByLatitudeAndLongitude(45D, 55D);
         assertEquals(ORDER_ID, result.get().getLatitude());
     }
-
-//    @Test
-//    public void when_ANonExistOrderIdIsGiven_then_NullIsReturned() {
-//        Order result = orderService.getOrder(NON_EXIST_ORDER_ID);
-//        assertNull(result);
-//    }
 }

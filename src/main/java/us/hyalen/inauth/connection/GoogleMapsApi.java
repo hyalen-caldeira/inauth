@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.stereotype.Component;
 import us.hyalen.inauth.domain.Location;
-import us.hyalen.inauth.resource.LocationResource;
+import us.hyalen.inauth.core.location.v1.LocationResource;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,9 +26,9 @@ public class GoogleMapsApi extends HttpConnection {
         parameters.put("latlng", latitude.toString() + "," + longitude.toString());
         parameters.put("key", "AIzaSyD3XityUX2FITKJsRvE8dnyV68xVfzIsf4");
         String json = getRequest(GET_REQUEST, BASE_URI_STRING, parameters);
-        LocationResource resource = gson.fromJson(json, LocationResource.class);
 
         return json;
+        // LocationResource resource = gson.fromJson(json, LocationResource.class);
         // return mapResourceToDomain(resource);
     }
 
@@ -38,9 +38,6 @@ public class GoogleMapsApi extends HttpConnection {
         /*
         location.setLatitude(resource);
         location.setLongitude(resource);
-        location.setCity(resource);
-        location.setState(resource);
-        location.setCountry(resource);
         */
 
         return location;
