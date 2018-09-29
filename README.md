@@ -6,15 +6,15 @@ Hi Charles, follow this insctructions to test the application. Please, let me kn
   * The application is configured to run on port 8088
   * The application use an in memory DB, H2 Database
   * The application will populate the DB with 10000 records previously generated
-    * `https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/util/Utils.java`
-  * I'm using the Google Maps API to get information from given credentials
-    * `https://github.com/hyalen-moreira/inauth/tree/master/src/main/java/us/hyalen/inauth/connection`
+    * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/util/Utils.java
+  * I'm using the Google Maps API to get information from given coordinates
+    * https://github.com/hyalen-moreira/inauth/tree/master/src/main/java/us/hyalen/inauth/connection
 ### To see all the code ###
 Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
 ### To see the seed data ###
-`https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql`
+https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql
 ### To execute the app ###
-java -jar inauth-0.0.1-SNAPSHOT.jar
+`java -jar inauth-0.0.1-SNAPSHOT.jar`
 I've sent the .jar file to your email
 ### Endpoints ###
 Once the application is running, open a browser of your choice
@@ -34,7 +34,7 @@ Once the application is running, open a browser of your choice
   * To access the in memory database
     * http://localhost:8088/h2-console
       * Driver Class: org.h2.Driver
-      * JDBC URL: jdbc:h2:mem:retail_order
+      * JDBC URL: jdbc:h2:mem:inauth
       * Login: inauth
       * Password: inauth
     * Press the 'connect' button
