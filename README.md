@@ -8,7 +8,10 @@ Hi Charles, follow this instructions to test the application. Please, let me kno
   * I'm using the Google Maps API to get information from given coordinates
     * https://github.com/hyalen-moreira/inauth/tree/master/src/main/java/us/hyalen/inauth/connection
   * In case you prefer to clone the repository, build and run by yourself, instead of execute the .jar file, you will need a Google Maps API key
-    * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/connection/GoogleMapsApi.java
+    * To get a Google Maps API key
+      * https://developers.google.com/maps/documentation/geocoding/get-api-key
+    * To set a key in the app
+      * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/connection/GoogleMapsApi.java
 ### To execute the app ###
 * `java -jar inauth-0.0.1-SNAPSHOT.jar`
 * I've sent the .jar file to your email
