@@ -73,7 +73,7 @@ public class LocationService {
                 sb.append("\n").append(distance).append(" MILES of distance from ").append(city);
 
                 if (distance <= 500D)
-                    sb.append(" and it is also within 500 MILES of distance.");
+                    sb.append(" and it is also within 500 MILES of distance of this city.");
             }
         }
 
