@@ -1,5 +1,41 @@
 # Java - Reverse Geocoding - Google Maps API - Spring Boot - Rest API - Unit/Integration Test #
 
+Hi Charles, please, follow this insctructions to test the application. Please, let me know if you have any question
+=========
+### Considerations ###
+  * The application is configured to run on port 8088
+  * The application use an in memory DB, H2 Database
+  * The application will populate the DB with 10000 records previously generated
+    * `https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/util/Utils.java`
+  * I'm using the Google Maps API to get information from given credentials
+    * `https://github.com/hyalen-moreira/inauth/tree/master/src/main/java/us/hyalen/inauth/connection`
+### To see all the code ###
+Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
+### To execute the app ###
+java -jar inauth-0.0.1-SNAPSHOT.jar
+### Endpoints ###
+Once the application is running, open a browser of your choice
+  * To get all coordinates
+    * http://localhost:8088/inauth/api/locations
+  * To get data from an expecific coordinate
+    * http://localhost:8088/inauth/api/locations/40.714224,-73.961452
+    * If the coordinate doens't exist in the DB, the app will return 'No Found'
+    * Else the application will access an API from Google Maps and will return information about the coordinate
+  * To see a report about distances, as requested
+    * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452
+    * If the coordinates is within USA you will see the message: 'The given coordinate is withing the USA'
+    * Otherwise you will see a report about distances of pre-defined cities
+  * To save
+    * http://localhost:8088/inauth/api/locations
+    * Inform the latitude and longitude on body of the http post request
+  * To access the in memory database
+    * http://localhost:8088/h2-console
+      * Driver Class: org.h2.Driver
+      * JDBC URL: jdbc:h2:mem:retail_order
+      * Login: inauth
+      * Password: inauth
+    * Press the 'connect' button
+
 Objective
 =========
 Create a DB containing 10.000 random entries for valid latitude and longitude coordinates and performing some operations using the DB.
@@ -13,12 +49,7 @@ Requirements
 ============
 
 ### Task 1) ###
-I've been using the H2 in memory DB. To populate it I 
-CALL CSVWRITE('/Users/hyalencaldeira/Documents/workspace/inauth/MyCSV.txt', 'SELECT * FROM LOCATION', 'charset=UTF-8 fieldSeparator=' || CHAR(9));
-http://localhost:8088/h2-console
-Login/Password: inauth
-SELECT CONCAT('(', LATITUDE, ', ', LONGITUDE, ', ', CITY, ', ', STATE, ', ', COUNTRY,')') FROM LOCATION
-
+I've been using the H2 in memory DB. 
 CALL CSVWRITE(
     '/Users/hyalencaldeira/Documents/workspace/inauth/MyCSV.txt', 
     'SELECT CONCAT(CHAR(40), 
@@ -50,45 +81,11 @@ Besides the Micro Service to fetch coordinates information, I've also added solu
    * Lima, Peru
  * For each of the above, tell how far away the entry's coordinates are from each city
 
-#### Criteria 3: Filter all the orders having more that two products in the transaction. ####
-```json
- eg:
- {
-         "orderNumber": "RTL_1003",
-         "discount": 19.99,
-         "taxPercent": 8.5,
-         "total": 139.97,
-         "totalTax": 11.89,
-         "grandTotal": 131.87,
-         "status": "SHIPPED",
-         "products": [
-             {
-                 "upc": "1358743283",
-                 "sku": "7394650110003",
-                 "description": "Polo Shirt",
-                 "price": 19.99
-             },
-             {
-                 "upc": "1458843283",
-                 "sku": "7394750120000",
-                 "description": "Floral Swing Skirt",
-                 "price": 69.99
-             },
-             {
-                 "upc": "1258793283",
-                 "sku": "7394950140000",
-                 "description": "True Skinny Jeans",
-                 "price": 49.99
-             }
-         ]
-     }
-```
-
 ### Task 4) ###
- * I've added unit tests for all the existing classes in the workspace.
+ * Missing - I've added unit tests for all the existing classes in the workspace.
 
 ### Task 5) ###
- * I've added **Spring Integration Tests** for all the `API endpoints`.
+ * Missing - I've added **Spring Integration Tests** for all the `API endpoints`.
 
 Existing API Endpoints
 ======================
@@ -101,6 +98,9 @@ Existing API Endpoints
 3) Add Location:
    **[POST]** `http://localhost:8088/api/locations`
 
+4) Fetch Location Details:
+   **[GET]** `http://localhost:8088/api/assessment/{latitude,longitude}`
+
 Technical Information
 =====================
  * To test, you should have Java 8, Maven and Git installed.
@@ -108,6 +108,7 @@ Technical Information
 
 Tech Stack
 ==========
+ * Google Maps API
  * Java 8.x
  * Maven 3.x
  * Spring Framework 4.x
