@@ -106,7 +106,7 @@ Besides the Micro Service to fetch coordinates information, I've also added solu
    * Mexico City, Mexico
    * Lima, Peru
  * For each of the above, tell how far away the entry's coordinates are from each city
- * You may see an example of this requirement accessing the http://localhost:8088/inauth/api/assessment/19.42847,-99.12766 endpoint you will see:
+ * You may see an example of this requirement accessing the http://localhost:8088/inauth/api/assessment/19.42847,-99.12766 endpoint
 
 ### Task 4) ###
  * Missing - I've added unit tests for all the existing classes in the workspace.
@@ -125,7 +125,7 @@ Existing API Endpoints
 3) Add Location:
    **[POST]** `http://localhost:8088/api/locations`
 
-4) Fetch Location Details:
+4) Fetch Report Details:
    **[GET]** `http://localhost:8088/api/assessment/{latitude,longitude}`
 
 Technical Information
