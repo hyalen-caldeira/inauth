@@ -17,7 +17,7 @@ Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
 ### To see the seed data ###
 https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql
 ### To test the endpoints ###
-Once the application is running, open a browser of your choice
+Once the application is running, open a browser of your choice and:
   * To get all coordinates
     * http://localhost:8088/inauth/api/locations
   * To get data from a specific coordinate
