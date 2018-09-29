@@ -24,7 +24,7 @@ public class GoogleMapsApi extends HttpConnection {
 
         // Get location
         parameters.put("latlng", latitude.toString() + "," + longitude.toString());
-        parameters.put("key", "AIzaSyD3XityUX2FITKJsRvE8dnyV68xVfzIsf4");
+        parameters.put("key", "PUT YOUR KEY HERE");
         String json = getRequest(GET_REQUEST, BASE_URI_STRING, parameters);
 
         return json;
