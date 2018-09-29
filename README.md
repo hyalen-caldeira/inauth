@@ -90,7 +90,7 @@ Besides the Micro Service to fetch coordinates information, I've also added solu
  * `getAllDataSets` - GET method to return all data in the DB.
  * `getData(latitude, longitude)` - GET method to return if the coordinates exists in the DB.
  * `addData(latitude, longitude)` - POST method to add coordinate to the DB.
- * Apart of the above web services I've also added the `getAssessment(latitude, longitude)` service - GET method to return a distance report.
+ * Apart of the above web services, I've also added the `getAssessment(latitude, longitude)` service - GET method to return a distance's report.
 
 #### From above Web Services, create a Java solution for: ####
  * Given the entry's coordinates, determine if those coordinates are within the United States.
