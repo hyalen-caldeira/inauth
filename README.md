@@ -1,6 +1,6 @@
 # Java - Reverse Geocoding - Google Maps API - Spring Boot - Rest API - Unit/Integration Test #
 
-Hi Charles, please, follow this insctructions to test the application. Please, let me know if you have any question
+Hi Charles, follow this insctructions to test the application. Please, let me know if you have any question
 =========
 ### Considerations ###
   * The application is configured to run on port 8088
