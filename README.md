@@ -32,7 +32,7 @@ Once the application is running, open a browser of your choice and:
     * http://localhost:8088/inauth/api/locations
     * Inform the latitude and longitude on body of the http post request
     * `{"latitude" : "42.714224", "longitude" : "-53.961452"}`
-  * To see a report about distances, as requested
+  * To see a report about distances (spreadsheet as requested)
     * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452
     * If the coordinates is within USA you will see the message: `The given coordinate is withing the USA`
     * Otherwise you will see a report about distances of pre-defined cities.
