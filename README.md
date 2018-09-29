@@ -9,6 +9,8 @@ Hi Charles, follow this instructions to test the application. Please, let me kno
     * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/util/Utils.java
   * I'm using the Google Maps API to get information from given coordinates
     * https://github.com/hyalen-moreira/inauth/tree/master/src/main/java/us/hyalen/inauth/connection
+  * In case you prefer to clone the repository, build and run by yourself, instead of execute the .jar file, you will need a Google Maps API key
+    * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/connection/GoogleMapsApi.java
 ### To see all the code ###
 Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
 ### To see the seed data ###
