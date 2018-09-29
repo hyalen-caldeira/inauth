@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:retail_order;db_close_on_exit=false
+    url: jdbc:h2:mem:inauth;db_close_on_exit=false
     driver-class-name: org.h2.Driver
     username: inauth
     password: inauth
