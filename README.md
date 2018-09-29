@@ -1,5 +1,3 @@
-# Java - Reverse Geocoding - Google Maps API - Spring Boot - Rest API - Unit/Integration Test #
-
 Hi Charles, follow this instructions to test the application. Please, let me know if you have any question and thanks for the opportunity to do the assessment.
 =========
 ### Considerations ###
