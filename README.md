@@ -1,6 +1,6 @@
 # Java - Reverse Geocoding - Google Maps API - Spring Boot - Rest API - Unit/Integration Test #
 
-Hi Charles, follow this insctructions to test the application. Please, let me know if you have any question
+Hi Charles, follow this instructions to test the application. Please, let me know if you have any question and thanks for the opportunity to do the assessment.
 =========
 ### Considerations ###
   * The application is configured to run on port 8088
@@ -14,25 +14,38 @@ Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
 ### To see the seed data ###
 https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql
 ### To execute the app ###
-`java -jar inauth-0.0.1-SNAPSHOT.jar`
-I've sent the .jar file to your email
+* `java -jar inauth-0.0.1-SNAPSHOT.jar`
+* I've sent the .jar file to your email
 ### Endpoints ###
 Once the application is running, open a browser of your choice
   * To get all coordinates
     * http://localhost:8088/inauth/api/locations
-  * To get data from an expecific coordinate
+  * To get data from a specific coordinate
     * http://localhost:8088/inauth/api/locations/40.714224,-73.961452
-    * If the coordinate doens't exist in the DB, the app will return 'No Found'
-    * Else the application will access an API from Google Maps and will return information about the coordinate
+    * If the coordinate doens't exist in the DB, the app will return '404 - No Found'
+    * Otherwise the application will access a Google Maps API and will return information about the coordinate
   * To see a report about distances, as requested
     * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452
     * If the coordinates is within USA you will see the message: 'The given coordinate is withing the USA'
-    * Otherwise you will see a report about distances of pre-defined cities
-  * To save
+    * Otherwise you will see a report about distances of pre-defined cities.
+    * Accessing the http://localhost:8088/inauth/api/assessment/19.42847,-99.12766 endpoint you will see:
+    ```
+    The given coordinate has: 
+
+    7020.238077159492 MILES of distance from TOKYO
+    2643.954095668077 MILES of distance from LIMA
+    8616.364079471108 MILES of distance from RIYADH
+    4633.421762585401 MILES of distance from REYKJAVIK
+    8061.066959776479 MILES of distance from SYDNEY
+    6016.952416298471 MILES of distance from ZURICH
+    0.0 MILES of distance from MEXICO and it is also within 500 MILES of distance of this city.
+    ```
+  * To add a new coordinate
     * http://localhost:8088/inauth/api/locations
     * Inform the latitude and longitude on body of the http post request
+    * `{"latitude" : "42.714224", "longitude" : "-53.961452"}`
   * To access the in memory database
-    * http://localhost:8088/h2-console
+    * http://localhost:8088/h2-console and then inform:
       * Driver Class: org.h2.Driver
       * JDBC URL: jdbc:h2:mem:inauth
       * Login: inauth
@@ -52,15 +65,21 @@ Requirements
 ============
 
 ### Task 1) ###
-I've been using the H2 in memory DB. 
+I've been using the H2 in memory DB. From H2 Database console, I run the following command to export the DB to be used as seed data:
+```
 CALL CSVWRITE(
     '/Users/hyalencaldeira/Documents/workspace/inauth/MyCSV.txt', 
-    'SELECT CONCAT(CHAR(40), 
-LATITUDE, CHAR(44), 
-LONGITUDE, CHAR(41)) 
-FROM LOCATION', 
-'charset=UTF-8 fieldSeparator=' || CHAR(9));
-
+    'SELECT CONCAT(
+        CHAR(40), 
+        LATITUDE, 
+        CHAR(44), 
+        LONGITUDE, 
+        CHAR(41)) 
+    FROM 
+        LOCATION', 
+    'charset=UTF-8 fieldSeparator=' || CHAR(9)
+);
+```
 ### Task 2) ###
 I've been using spring-boot to make the server up, runnable and ready to receive HTTP requests. The server is started on port 8088.
 
@@ -83,6 +102,7 @@ Besides the Micro Service to fetch coordinates information, I've also added solu
    * Mexico City, Mexico
    * Lima, Peru
  * For each of the above, tell how far away the entry's coordinates are from each city
+ * You may see an example of this requirement accessing the http://localhost:8088/inauth/api/assessment/19.42847,-99.12766 endpoint you will see:
 
 ### Task 4) ###
  * Missing - I've added unit tests for all the existing classes in the workspace.
