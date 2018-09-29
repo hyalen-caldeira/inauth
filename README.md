@@ -26,7 +26,7 @@ Once the application is running, open a browser of your choice
     * Otherwise the application will access a Google Maps API and will return information about the coordinate
   * To see a report about distances, as requested
     * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452
-    * If the coordinates is within USA you will see the message: 'The given coordinate is withing the USA'
+    * If the coordinates is within USA you will see the message: `The given coordinate is withing the USA`
     * Otherwise you will see a report about distances of pre-defined cities.
     * Accessing the http://localhost:8088/inauth/api/assessment/19.42847,-99.12766 endpoint you will see:
     ```
@@ -81,7 +81,7 @@ CALL CSVWRITE(
 );
 ```
 ### Task 2) ###
-I've been using spring-boot to make the server up, runnable and ready to receive HTTP requests. The server is started on port 8088.
+I've used spring-boot to make the server up, runnable and ready to receive HTTP requests. The server is started on port 8088.
 
 ### Task 3) ###
 Besides the Micro Service to fetch coordinates information, I've also added solution performing operations through coordinates of some locations:
@@ -90,6 +90,7 @@ Besides the Micro Service to fetch coordinates information, I've also added solu
  * `getAllDataSets` - GET method to return all data in the DB.
  * `getData(latitude, longitude)` - GET method to return if the coordinates exists in the DB.
  * `addData(latitude, longitude)` - POST method to add coordinate to the DB.
+ * Apart of the above web services I've also added the `getAssessment(latitude, longitude)` service.
 
 #### From above Web Services, create a Java solution for: ####
  * Given the entry's coordinates, determine if those coordinates are within the United States.
@@ -141,7 +142,6 @@ Tech Stack
  * JPA
  * H2 database
  * JUnit 4.x
- * Mockito 2.x
  * Hamcrest
  * Spring Integration Tests
- * Lombok
+ * Project Lombok
