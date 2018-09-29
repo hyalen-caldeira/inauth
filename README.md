@@ -11,8 +11,11 @@ Hi Charles, please, follow this insctructions to test the application. Please, l
     * `https://github.com/hyalen-moreira/inauth/tree/master/src/main/java/us/hyalen/inauth/connection`
 ### To see all the code ###
 Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
+### To see the seed data ###
+`https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql`
 ### To execute the app ###
 java -jar inauth-0.0.1-SNAPSHOT.jar
+I've sent the .jar file to your email
 ### Endpoints ###
 Once the application is running, open a browser of your choice
   * To get all coordinates
