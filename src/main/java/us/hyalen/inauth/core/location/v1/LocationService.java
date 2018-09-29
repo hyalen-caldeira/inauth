@@ -58,7 +58,6 @@ public class LocationService {
     public String getAssessment(Double latitude, Double longitude) {
         Map<String, LatLng> map = getAssessmentMap(latitude, longitude);
         StringBuilder sb = new StringBuilder();
-        DecimalFormat df = new DecimalFormat(".##");
 
         if (isWithinUsa(latitude, longitude))
             sb.append("The given coordinate is withing the USA");
@@ -70,8 +69,6 @@ public class LocationService {
                 LatLng latLng = entry.getValue();
 
                 Double distance = distance(latitude, latLng.getLatitude(), longitude, latLng.getLongitude(), 0, 0);
-
-                distance = Double.valueOf(df.format(distance));
 
                 sb.append("\n").append(distance).append(" MILES of distance from ").append(city);
 
@@ -100,6 +97,7 @@ public class LocationService {
     private double distance(double lat1, double lat2, double lon1,
                                   double lon2, double el1, double el2) {
 
+        DecimalFormat df = new DecimalFormat(".##");
         final int R = 6371; // Radius of the earth
 
         double latDistance = Math.toRadians(lat2 - lat1);
@@ -107,12 +105,13 @@ public class LocationService {
         double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
                 + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
                 * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         double distance = R * c * 0.621371; // convert to miles
 
         double height = el1 - el2;
 
-        distance = Math.pow(distance, 2) + Math.pow(height, 2);
+        distance = Double.valueOf(df.format(Math.pow(distance, 2) + Math.pow(height, 2)));
 
         return Math.sqrt(distance);
     }
