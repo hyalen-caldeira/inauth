@@ -16,7 +16,7 @@ Hi Charles, follow this instructions to test the application. Please, let me kno
 ### To execute the app ###
 * `java -jar inauth-0.0.1-SNAPSHOT.jar`
 * I've sent the .jar file to your email
-### To see all the code ###
+### To see the Java Code ###
 Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
 ### To see the seed data ###
 https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql
