@@ -34,7 +34,7 @@ Once the application is running, open a browser of your choice
   * To access the in memory database
     * http://localhost:8088/h2-console
       * Driver Class: org.h2.Driver
-      * JDBC URL: jdbc:h2:mem:retail_order
+      * JDBC URL: jdbc:h2:mem:inauth
       * Login: inauth
       * Password: inauth
     * Press the 'connect' button
