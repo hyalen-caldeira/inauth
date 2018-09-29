@@ -24,7 +24,7 @@ Once the application is running, open a browser of your choice
     * http://localhost:8088/inauth/api/locations
   * To get data from a specific coordinate
     * http://localhost:8088/inauth/api/locations/40.714224,-73.961452
-    * If the coordinate doens't exist in the DB, the app will return '404 - No Found'
+    * If the coordinate doens't exist in the DB, the app will return `404 - No Found`
     * Otherwise the application will access a Google Maps API and will return information about the coordinate
   * To see a report about distances, as requested
     * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452
