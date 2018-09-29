@@ -18,7 +18,7 @@ https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.
 ### To execute the app ###
 * `java -jar inauth-0.0.1-SNAPSHOT.jar`
 * I've sent the .jar file to your email
-### Endpoints ###
+### To test the Endpoints ###
 Once the application is running, open a browser of your choice
   * To get all coordinates
     * http://localhost:8088/inauth/api/locations
