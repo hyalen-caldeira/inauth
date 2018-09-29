@@ -7,7 +7,7 @@ Hi Charles, follow this insctructions to test the application. Please, let me kn
   * The application use an in memory DB, H2 Database
   * The application will populate the DB with 10000 records previously generated
     * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/util/Utils.java
-  * I'm using the Google Maps API to get information from given credentials
+  * I'm using the Google Maps API to get information from given coordinates
     * https://github.com/hyalen-moreira/inauth/tree/master/src/main/java/us/hyalen/inauth/connection
 ### To see all the code ###
 Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
