@@ -72,7 +72,7 @@ Requirements
 I've been using the H2 in memory DB. From H2 Database console, I run the following command to export the DB to be used as seed data:
 ```
 CALL CSVWRITE(
-    '/Users/hyalencaldeira/Documents/workspace/inauth/MyCSV.txt', 
+    '/Users/hyalencaldeira/Documents/workspace/inauth/src/main/resources/data-h2.sql', 
     'SELECT CONCAT(
         CHAR(40), 
         LATITUDE, 
