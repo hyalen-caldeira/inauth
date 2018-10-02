@@ -147,6 +147,5 @@ Tech Stack
  * JPA
  * H2 database
  * JUnit 4.x
- * Hamcrest
  * Spring Integration Tests
  * Project Lombok
