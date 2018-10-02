@@ -132,7 +132,8 @@ Existing API Endpoints
 Technical Information
 =====================
  * To test, you should have Java 8, Maven and Git installed.
- * The sample data has been pre-loaded so that the `endpoints` can be tested. Please refer to `data-h2.sql`.
+ * The sample data has been pre-loaded so that the `endpoints` can be tested. Please refer to `data-h2.sql` on 
+ https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql.
 
 Tech Stack
 ==========
