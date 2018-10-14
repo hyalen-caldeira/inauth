@@ -22,18 +22,18 @@ Clone the GitHub project https://github.com/hyalen-moreira/inauth.git
 https://github.com/hyalen-moreira/inauth/blob/master/src/main/resources/data-h2.sql
 ### To test the endpoints ###
 Once the application is running, open a browser of your choice and:
-  * To get all coordinates
+  * To get all coordinates - GET
     * http://localhost:8088/inauth/api/locations
-  * To get data from a specific coordinate
+  * To get data from a specific coordinate - GET
     * http://localhost:8088/inauth/api/locations/40.714224,-73.961452
     * If the coordinate doens't exist in the DB, the app will return `404 - No Found`
     * Otherwise the application will access a Google Maps API and will return information about the coordinate
-  * To add a new coordinate
+  * To add a new coordinate - POST
     * http://localhost:8088/inauth/api/locations
     * Inform the latitude and longitude on body of the http post request
     * `{"latitude" : "42.714224", "longitude" : "-53.961452"}`
 ### To see a report about distances (spreadsheet as requested) ###
-  * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452
+  * http://localhost:8088/inauth/api/assessment/40.714224,-73.961452 - GET
   * If the coordinates is within USA you will see the message: `The given coordinate is withing the USA`
   * Otherwise you will see a report about distances of pre-defined cities.
   * Accessing the http://localhost:8088/inauth/api/assessment/19.42847,-99.12766 endpoint you will see:
