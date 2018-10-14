@@ -2,7 +2,7 @@ Hi Charles, follow these instructions to test the application. Please, let me kn
 =========
 ### Considerations ###
   * The application is configured to run on port 8088
-  * The application use an in memory DB, H2 Database
+  * The application use an in memory DB - H2 Database
   * The application was developed using Spring Boot. This is a stand alone application where everything you need is embedded on it (Tomcat, DB, ...)
   * The application will populate the DB with 10000 records previously generated
     * https://github.com/hyalen-moreira/inauth/blob/master/src/main/java/us/hyalen/inauth/util/Utils.java
