@@ -1,4 +1,4 @@
-Hi Charles, follow these instructions to test the application. Please, let me know if you have any question and thanks for the opportunity to do the assessment.
+Follow these instructions to test the application.
 =========
 ### Considerations ###
   * The application is configured to run on port 8088
